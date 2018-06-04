@@ -1,0 +1,21 @@
+{
+  "name": "calculator_protractor_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://jsheridanwells.visualstudio.com/Calculator_Protractor_Demo/_git/Calculator_Protractor_Demo"
+  },
+  "author": "jsheridanwells",
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.7.0"
+  }
+}
