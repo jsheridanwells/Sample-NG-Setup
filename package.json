@@ -8,9 +8,8 @@
   },
   "scripts": {
     "test": "protractor tests/conf.js",
-    "prepare": "node_modules/.bin/webdriver-manager update",
-    "update": "node_modules/.bin/webdriver-manager update",
-    "webdriver:start": "webdriver-manager start"
+    "webdriver:update": "node_modules/.bin/webdriver-manager update",
+    "webdriver:start": "node_modules/.bin/webdriver-manager start"
   },
   "repository": {
     "type": "git",
