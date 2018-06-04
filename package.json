@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "protractor tests/conf.js"
+    "test": "protractor tests/conf.js",
+    "webdriver:start": "webdriver-manager start"
   },
   "repository": {
     "type": "git",
