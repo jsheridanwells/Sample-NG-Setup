@@ -2,7 +2,7 @@
 
 describe('Calculator', () => {
     beforeAll(() => {
-        browser.get('http://127.0.0.1:8080/');
+        browser.get('http://localhost:9000');
     });
 
     let num1 = Math.round(Math.random() * 100);
