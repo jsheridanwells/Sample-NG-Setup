@@ -56,7 +56,7 @@ module.exports = function(grunt) {
             },
             test: {
                 options: {
-                    base: ['']
+                    base: ['./']
                 }
             }
         }
@@ -67,6 +67,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-protractor-runner');
     grunt.loadNpmTasks('grunt-run');
 
-    grunt.registerTask('default', ['connect:test', 'protractor:continuous', 'watch:protractor']);
+    grunt.registerTask('default', ['connect:test', 'protractor:e2e']);
 
 };
