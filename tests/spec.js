@@ -2,7 +2,7 @@
 
 describe('Calculator', () => {
     beforeAll(() => {
-        browser.get('http://127.0.0.1:8080/');
+        browser.get('http://localhost:9000');
     });
 
     let num1 = Math.round(Math.random() * 100);
@@ -45,7 +45,6 @@ describe('Calculator', () => {
                 return eqBtn.click();
             })
             .then(() => {
-                console.log('num 1: ', num1, 'num 2: ', num2);
                 expect(input.getAttribute('value')).toEqual(String(num1 - num2));
             });      
     });
@@ -63,7 +62,6 @@ describe('Calculator', () => {
                 return eqBtn.click();
             })
             .then(() => {
-                console.log('num 1: ', num1, 'num 2: ', num2);
                 expect(input.getAttribute('value')).toEqual(String(num1 * num2));
             });   
     });
@@ -81,7 +79,6 @@ describe('Calculator', () => {
                 return eqBtn.click();
             })
             .then(() => {
-                console.log('num 1: ', num1, 'num 2: ', num2);
                 expect(input.getAttribute('value')).toEqual(String(num1 / num2));
             });   
 
