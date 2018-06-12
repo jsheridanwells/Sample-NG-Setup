@@ -36,6 +36,13 @@
             </div>
             <div class="col-2"></div>
         </div>
+        <div id="data-frame" class="row mt-5" ng-controller="dataFrameController">
+            <div ng-repeat="datum in myData">
+                <h2 class="data-title">{{datum.title}}</h2>
+                <p class="data-body">{{datum.body}}</p>
+            </div>
+            
+        </div>
     </div>
 
     <!-- Optional JavaScript -->
@@ -47,7 +54,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="/node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-mocks/angular-mocks.js"></script>
     <script src="src/app.js"></script>
+    <script src="src/dataFrameController.js"></script>
 </body>
 
 </html>

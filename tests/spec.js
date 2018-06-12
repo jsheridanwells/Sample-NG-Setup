@@ -1,5 +1,34 @@
 'use strict';
 
+let fs = require('fs');
+let HttpBackend = require('http-backend-proxy');
+let proxy = new HttpBackend(browser);
+let dataSource = require('./data-source');
+
+// write screenshot to file
+const writeScreenShot = (data, filename) => {
+    let stream = fs.createWriteStream(filename);
+    stream.write(new Buffer(data, 'base64'));
+    stream.end();
+}
+
+describe('Data', () => {
+    beforeAll(() => {
+        proxy.onLoad.whenGET('https://jsonplaceholder.typicode.com/posts').respond(200, dataSource.data);
+        browser.get('http://localhost:9000');
+    });
+    
+    it('should show first title', () => {
+        $$('.data-title').first().getText().then(text => {
+            expect(text).toEqual(dataSource.data[0].title);
+        });
+    });
+
+    afterAll(() => {
+        proxy.onLoad.reset();
+    });
+});
+
 describe('Calculator', () => {
     beforeAll(() => {
         browser.get('http://localhost:9000');
@@ -83,6 +112,5 @@ describe('Calculator', () => {
             });   
 
     });
-
     afterEach(() => clearBtn.click());
 });

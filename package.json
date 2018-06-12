@@ -20,12 +20,16 @@
   "license": "MIT",
   "dependencies": {
     "angular": "^1.7.0",
-    "protractor": "^5.3.2",
+    "angular-mock": "^1.0.0",
+    "angular-mocks": "^1.7.1",
     "grunt": "1.0.3",
+    "grunt-cli": "^1.2.0",
     "grunt-contrib-connect": "1.0.2",
     "grunt-contrib-watch": "1.1.0",
     "grunt-protractor-runner": "5.0.0",
     "grunt-run": "0.8.1",
-    "grunt-cli": "1.2.0"
+    "http-backend-proxy": "^1.4.3",
+    "ng-mock-e2e": "^0.1.4",
+    "protractor": "^5.3.2"
   }
 }
