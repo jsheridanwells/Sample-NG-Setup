@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         protractor: {
             options: {
-                configFile: 'tests/conf.js',
+                configFile: 'tests/protractor.conf.js',
                 noColor: false,
                 args: {
 
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                 livereload: true
             },
             protractor: {
-                files: ['tests/*.js'],
+                files: ['tests/e2e/*.js'],
                 tasks: ['protractor:continuous']
             }
         },
@@ -62,10 +62,12 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-protractor-runner');
-    grunt.loadNpmTasks('grunt-run');
+    // grunt.loadNpmTasks('grunt-contrib-watch');
+    // grunt.loadNpmTasks('grunt-contrib-connect');
+    // grunt.loadNpmTasks('grunt-protractor-runner');
+    // grunt.loadNpmTasks('grunt-run');
+
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     grunt.registerTask('default', ['connect:test', 'protractor:e2e']);
 
