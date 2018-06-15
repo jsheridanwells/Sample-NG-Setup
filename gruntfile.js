@@ -89,6 +89,17 @@ module.exports = function(grunt) {
             dist: { files: { './dist/index.html': ['./index.html'] } }
         },
 
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    src: ['./css/**/*.css'],
+                    dest: './dist',
+                    ext: '.min.css'
+                }]
+            }
+        },
+
         watch: {
             options: {
                 livereload: true
@@ -141,5 +152,5 @@ module.exports = function(grunt) {
     grunt.registerTask('test', ['karma:unit:start', 'connect:test', 'protractor:e2e']);
     grunt.registerTask('test:unit', ['karma:continuous:start', 'watch:karma']);
     grunt.registerTask('test:e2e', ['connect:test', 'protractor:continuous', 'watch:protractor']);
-    grunt.registerTask('build', ['jshint', 'test', 'ngAnnotate', 'babel', 'uglify', 'processhtml']);  
+    grunt.registerTask('build', ['jshint', 'test', 'ngAnnotate', 'babel', 'uglify', 'processhtml', 'cssmin']);  
 };
