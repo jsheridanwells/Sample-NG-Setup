@@ -19,7 +19,7 @@ var dataSource = function () {
             "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
         }
     ];
-}
+};
 
 module.exports = new dataSource();
 

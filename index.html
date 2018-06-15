@@ -9,7 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <!-- build:css styles.min.css-->
     <link rel="stylesheet" href="styles.css">
+    <!-- /build -->
 
     <title>Protractor Calculator</title>
 </head>
@@ -53,12 +55,21 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script src="/node_modules/angular/angular.js"></script>
+
+    <!-- build:js lib/angular.min.js -->
+    <script src="node_modules/angular/angular.js"></script>
+    <!-- /build -->
+    
+    <!-- build:remove -->
     <script src="node_modules/angular-mocks/angular-mocks.js"></script>
+    <!-- /build -->
+        
+    <!-- build:js build.min.js -->
     <script src="src/app.js"></script>
     <script src="src/calc-controller.js"></script>
     <script src="src/data-frame-controller.js"></script>
     <script src="src/enter-directive.js"></script>
+    <!-- /build -->
 </body>
 
 </html>
